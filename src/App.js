@@ -10,18 +10,18 @@ export default function App() {
       >
         This project was coded by{" "}
         <a
-          style={{ textDecoration: "none", color: "#0969da" }}
           href="https://github.com/Kat-Str/dictionary-app"
           target="_blank"
+          rel="noreferrer"
         >
           {" "}
           Katarzyna Strzałek{" "}
         </a>
         and is{" "}
         <a
-          style={{ textDecoration: "none", color: "#0969da" }}
           href="https://github.com/Kat-Str/dictionary-app"
           target="_blank"
+          rel="noreferrer"
         >
           {" "}
           open-sourced on GitHub

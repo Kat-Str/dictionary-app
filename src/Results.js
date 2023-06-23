@@ -6,12 +6,15 @@ export default function Results(props) {
       <div style={{ textAlign: "left" }}>
         <h2>{props.results.word}</h2>
         {props.results.phonetics.map(function (phonetic, index) {
-          if (index < 1)
+          if (index < 1) {
             return (
               <span style={{ fontWeight: "bold", opacity: "0.7" }} key={index}>
                 {phonetic.text}{" "}
               </span>
             );
+          } else {
+            return null;
+          }
         })}
 
         {props.results.meanings.map(function (meaning, index) {
@@ -19,7 +22,7 @@ export default function Results(props) {
             <section key={index}>
               <h3>{meaning.partOfSpeech}</h3>
               {meaning.definitions.map(function (definition, index) {
-                if (index < 1)
+                if (index < 1) {
                   return (
                     <div key={index}>
                       <div className="definition">{definition.definition}</div>
@@ -28,6 +31,9 @@ export default function Results(props) {
                       </div>
                     </div>
                   );
+                } else {
+                  return null;
+                }
               })}
             </section>
           );
