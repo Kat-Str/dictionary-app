@@ -1,22 +1,13 @@
 import React from "react";
 import Synonyms from "./Synonyms";
+import Phonetic from "./Phonetic";
 
 export default function Results(props) {
   if (props.results) {
     return (
       <div style={{ textAlign: "left" }}>
         <h2>{props.results.word}</h2>
-        {props.results.phonetics.map(function (phonetic, index) {
-          if (index < 1) {
-            return (
-              <span style={{ fontWeight: "bold", opacity: "0.7" }} key={index}>
-                {phonetic.text}{" "}
-              </span>
-            );
-          } else {
-            return null;
-          }
-        })}
+        <Phonetic phonetic={props.results.phonetics} />
 
         {props.results.meanings.map(function (meaning, index) {
           return (
