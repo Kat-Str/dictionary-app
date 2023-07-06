@@ -1,4 +1,5 @@
 import React from "react";
+import Synonyms from "./Synonyms";
 
 export default function Results(props) {
   if (props.results) {
@@ -22,13 +23,14 @@ export default function Results(props) {
             <section key={index}>
               <h3>{meaning.partOfSpeech}</h3>
               {meaning.definitions.map(function (definition, index) {
-                if (index < 1) {
+                if (index < 2) {
                   return (
                     <div key={index}>
                       <div className="definition">{definition.definition}</div>
                       <div style={{ opacity: "0.5" }} className="example">
                         {definition.example}
                       </div>
+                      <Synonyms synonyms={definition.synonyms} />
                     </div>
                   );
                 } else {
