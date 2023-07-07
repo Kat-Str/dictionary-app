@@ -4,7 +4,7 @@ import "./App.css";
 export default function App() {
   return (
     <div>
-      <Dictionary />
+      <Dictionary defaultKeyword="sunset" />
       <footer
         style={{ textAlign: "center", marginTop: "40px", display: "block" }}
       >
