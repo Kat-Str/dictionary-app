@@ -34,23 +34,35 @@ export default function Dictionary(props) {
   if (loaded) {
     return (
       <div style={{ textAlign: "center" }}>
-        <h1>Dictionary</h1>
-        <h4 style={{ fontWeight: "normal" }}>
-          What word do you want to look up?
-        </h4>
         <form
           onSubmit={handleSubmit}
           style={{ display: "flex", justifyContent: "center" }}
         >
           <input
             type="search"
-            placeholder="Search"
+            placeholder="What word do you want to look up?
+"
+            style={{
+              border: "none",
+              margin: "5px",
+              padding: "15px",
+              width: "50%",
+              borderRadius: "8px",
+              fontSize: "1.3rem",
+            }}
             onChange={handleKeywordChange}
           ></input>
           <input
+            id="magnifying-glass"
             type="submit"
             value="&#x1F50D;"
-            style={{ border: "none", fontSize: "1.5rem" }}
+            style={{
+              border: "none",
+              fontSize: "2rem",
+              borderRadius: "50%",
+              backgroundColor: "transparent",
+              filter: "saturate(300%)",
+            }}
           ></input>
         </form>
         <Results results={results} />

@@ -1,12 +1,29 @@
 import Dictionary from "./Dictionary";
 import "./App.css";
+import Logo from "./Logo";
+import React, { useEffect } from "react";
 
 export default function App() {
+  useEffect(() => {
+    const interval = setInterval(generateRandomColor, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  function generateRandomColor() {
+    const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    document.documentElement.style.setProperty("--random-color", randomColor);
+  }
   return (
     <div>
-      <Dictionary defaultKeyword="sunset" />
+      <Logo />
+      <Dictionary defaultKeyword="lexicography" />
       <footer
-        style={{ textAlign: "center", marginTop: "40px", display: "block" }}
+        style={{
+          textAlign: "center",
+          marginTop: "40px",
+          display: "block",
+          color: "#fff",
+        }}
       >
         This project was coded by{" "}
         <a

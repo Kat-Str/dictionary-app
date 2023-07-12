@@ -1,8 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ysabeau+Office:ital,wght@0,400;0,500;0,900;1,400;1,500;1,900&display=swap");
+
 body {
   margin: 40px;
+  font-family: "Ysabeau Office", sans-serif;
+
+  background-image: url("./media/background-books.jpg");
+  background-position: -15%;
+  background-repeat: repeat-x;
+  background-size: cover;
 }
 
 a {
   text-decoration: none;
-  color: #0969da;
+  color: #88b2e3;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+section {
+  background-color: #f4f8fc;
+  padding: 40px;
+  margin: 20px auto;
+  border-radius: 8px;
+  max-width: 850px;
+  line-height: 2;
+  font-size: 1.2rem;
+  transition: all ease-in 0.2s;
+
+  border: 10px solid transparent;
+}
+
+section:hover {
+  border-color: var(--random-color);
+}
+
+section h3 {
+  font-size: 2rem;
+}
+
+section h2 {
+  font-size: 2.5rem;
+}
+
+.logo {
+  max-width: 200px;
+  margin-right: 20px;
+}
+
+#magnifying-glass {
+  transition: all ease-in 0.3s;
+}
+#magnifying-glass:hover {
+  scale: 1.5;
+}
+
+h1 {
+  opacity: 0.7;
+  font-weight: 500;
+  transition: all ease-in-out 0.4s;
+}
+
+h1:hover {
+  text-shadow: 0 0 10px rgb(241, 243, 144);
 }
