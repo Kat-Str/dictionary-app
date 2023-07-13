@@ -46,9 +46,9 @@ export default function Dictionary(props) {
               border: "none",
               margin: "5px",
               padding: "15px",
-              width: "50%",
               borderRadius: "8px",
               fontSize: "1.3rem",
+              width: "40%",
             }}
             onChange={handleKeywordChange}
           ></input>
