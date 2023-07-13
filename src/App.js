@@ -1,7 +1,7 @@
 import Dictionary from "./Dictionary";
 import "./App.css";
 import Logo from "./Logo";
-import React, { useEffect } from "react";
+import React from "react";
 
 export default function App() {
   return (
