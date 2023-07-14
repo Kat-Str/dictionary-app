@@ -28,13 +28,14 @@ export default function Results(props) {
   if (props.results) {
     return (
       <div style={{ textAlign: "left" }}>
-        <section onMouseOver={generateRandomColor}>
+        <section onMouseEnter={generateRandomColor}>
           <h2>{props.results.word}</h2>
           <Phonetic phonetic={props.results.phonetics} />
         </section>
+
         {props.results.meanings.map(function (meaning, index) {
           return (
-            <section key={index} onMouseOver={generateRandomColor}>
+            <section key={index} onMouseEnter={generateRandomColor}>
               <h3>{meaning.partOfSpeech}</h3>
               {meaning.definitions.map(function (definition, index) {
                 if (index < 2) {
